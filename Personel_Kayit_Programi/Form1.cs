@@ -24,7 +24,19 @@ namespace Personel_Kayit_Programi
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            SoyadBox.Text = "Bu alanın doldurulması zorunludur.";
+            SoyadBox.Text = "...";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'kitapYeniDataSet.personel' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.personelTableAdapter.Fill(this.kitapYeniDataSet.personel);
         }
     }
 }

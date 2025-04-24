@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,10 +55,22 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.kitapYeniDataSet = new Personel_Kayit_Programi.KitapYeniDataSet();
+            this.personelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personelTableAdapter = new Personel_Kayit_Programi.KitapYeniDataSetTableAdapters.personelTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Ekran.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kitapYeniDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -224,6 +237,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Listele";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -284,19 +298,29 @@
             this.Ekran.Controls.Add(this.dataGridView1);
             this.Ekran.Location = new System.Drawing.Point(34, 382);
             this.Ekran.Name = "Ekran";
-            this.Ekran.Size = new System.Drawing.Size(784, 221);
+            this.Ekran.Size = new System.Drawing.Size(830, 221);
             this.Ekran.TabIndex = 2;
             this.Ekran.TabStop = false;
             this.Ekran.Text = "Ekran";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.adDataGridViewTextBoxColumn,
+            this.soyadDataGridViewTextBoxColumn,
+            this.sehirDataGridViewTextBoxColumn,
+            this.maasDataGridViewTextBoxColumn,
+            this.durumDataGridViewTextBoxColumn,
+            this.meslekDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.personelBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 195);
+            this.dataGridView1.Size = new System.Drawing.Size(824, 195);
             this.dataGridView1.TabIndex = 0;
             // 
             // maskedTextBox1
@@ -317,11 +341,82 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Maaş:";
             // 
+            // kitapYeniDataSet
+            // 
+            this.kitapYeniDataSet.DataSetName = "KitapYeniDataSet";
+            this.kitapYeniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personelBindingSource
+            // 
+            this.personelBindingSource.DataMember = "personel";
+            this.personelBindingSource.DataSource = this.kitapYeniDataSet;
+            // 
+            // personelTableAdapter
+            // 
+            this.personelTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // adDataGridViewTextBoxColumn
+            // 
+            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
+            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
+            this.adDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            this.adDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // soyadDataGridViewTextBoxColumn
+            // 
+            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
+            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
+            this.soyadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            this.soyadDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // sehirDataGridViewTextBoxColumn
+            // 
+            this.sehirDataGridViewTextBoxColumn.DataPropertyName = "sehir";
+            this.sehirDataGridViewTextBoxColumn.HeaderText = "sehir";
+            this.sehirDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sehirDataGridViewTextBoxColumn.Name = "sehirDataGridViewTextBoxColumn";
+            this.sehirDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // maasDataGridViewTextBoxColumn
+            // 
+            this.maasDataGridViewTextBoxColumn.DataPropertyName = "maas";
+            this.maasDataGridViewTextBoxColumn.HeaderText = "maas";
+            this.maasDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maasDataGridViewTextBoxColumn.Name = "maasDataGridViewTextBoxColumn";
+            this.maasDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // durumDataGridViewTextBoxColumn
+            // 
+            this.durumDataGridViewTextBoxColumn.DataPropertyName = "durum";
+            this.durumDataGridViewTextBoxColumn.HeaderText = "durum";
+            this.durumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.durumDataGridViewTextBoxColumn.Name = "durumDataGridViewTextBoxColumn";
+            this.durumDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // meslekDataGridViewTextBoxColumn
+            // 
+            this.meslekDataGridViewTextBoxColumn.DataPropertyName = "meslek";
+            this.meslekDataGridViewTextBoxColumn.HeaderText = "meslek";
+            this.meslekDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.meslekDataGridViewTextBoxColumn.Name = "meslekDataGridViewTextBoxColumn";
+            this.meslekDataGridViewTextBoxColumn.Width = 110;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 650);
+            this.ClientSize = new System.Drawing.Size(876, 650);
             this.Controls.Add(this.Ekran);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -329,11 +424,14 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.Ekran.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kitapYeniDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,6 +464,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private KitapYeniDataSet kitapYeniDataSet;
+        private System.Windows.Forms.BindingSource personelBindingSource;
+        private KitapYeniDataSetTableAdapters.personelTableAdapter personelTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sehirDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn meslekDataGridViewTextBoxColumn;
     }
 }
 
