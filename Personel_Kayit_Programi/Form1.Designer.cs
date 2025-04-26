@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,23 +45,16 @@
             this.SoyadBox = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Ekran = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.kitapYeniDataSet = new Personel_Kayit_Programi.KitapYeniDataSet();
-            this.personelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personelTableAdapter = new Personel_Kayit_Programi.KitapYeniDataSetTableAdapters.personelTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,12 +62,15 @@
             this.maasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.meslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kitapYeniDataSet = new Personel_Kayit_Programi.KitapYeniDataSet();
+            this.personelTableAdapter = new Personel_Kayit_Programi.KitapYeniDataSetTableAdapters.personelTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Ekran.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kitapYeniDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kitapYeniDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -98,6 +98,46 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personel Kayıt";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 212);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 18);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Maaş:";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(151, 209);
+            this.maskedTextBox1.Mask = "0000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(181, 27);
+            this.maskedTextBox1.TabIndex = 14;
+            this.maskedTextBox1.ValidatingType = typeof(int);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(213, 244);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(72, 22);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Bekar";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(152, 244);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(55, 22);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Evli";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -191,28 +231,6 @@
             this.textBox1.Size = new System.Drawing.Size(181, 27);
             this.textBox1.TabIndex = 0;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(152, 244);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 22);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Evli";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(213, 244);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 22);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Bekar";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button7);
@@ -229,51 +247,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
             // 
-            // button1
+            // button7
             // 
-            this.button1.Location = new System.Drawing.Point(15, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Listele";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(15, 73);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Kaydet";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(15, 112);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(15, 151);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(225, 33);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Güncelle";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(15, 190);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(225, 33);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Temizle";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button7.Location = new System.Drawing.Point(15, 268);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(225, 33);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Grafikler";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -284,14 +265,52 @@
             this.button6.Text = "İstatistik";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // button5
             // 
-            this.button7.Location = new System.Drawing.Point(15, 268);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(225, 33);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Grafikler";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button5.Location = new System.Drawing.Point(15, 190);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(225, 33);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Temizle";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(15, 151);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(225, 33);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Güncelle";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(15, 112);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(225, 33);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Sil";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(15, 73);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(225, 33);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Kaydet";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(225, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Listele";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Ekran
             // 
@@ -322,38 +341,6 @@
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(824, 195);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(151, 209);
-            this.maskedTextBox1.Mask = "0000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(181, 27);
-            this.maskedTextBox1.TabIndex = 14;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 212);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 18);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Maaş:";
-            // 
-            // kitapYeniDataSet
-            // 
-            this.kitapYeniDataSet.DataSetName = "KitapYeniDataSet";
-            this.kitapYeniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personelBindingSource
-            // 
-            this.personelBindingSource.DataMember = "personel";
-            this.personelBindingSource.DataSource = this.kitapYeniDataSet;
-            // 
-            // personelTableAdapter
-            // 
-            this.personelTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -412,6 +399,20 @@
             this.meslekDataGridViewTextBoxColumn.Name = "meslekDataGridViewTextBoxColumn";
             this.meslekDataGridViewTextBoxColumn.Width = 110;
             // 
+            // personelBindingSource
+            // 
+            this.personelBindingSource.DataMember = "personel";
+            this.personelBindingSource.DataSource = this.kitapYeniDataSet;
+            // 
+            // kitapYeniDataSet
+            // 
+            this.kitapYeniDataSet.DataSetName = "KitapYeniDataSet";
+            this.kitapYeniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personelTableAdapter
+            // 
+            this.personelTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -430,8 +431,8 @@
             this.groupBox2.ResumeLayout(false);
             this.Ekran.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kitapYeniDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kitapYeniDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
