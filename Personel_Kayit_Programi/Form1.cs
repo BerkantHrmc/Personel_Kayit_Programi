@@ -25,7 +25,7 @@ namespace Personel_Kayit_Programi
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            SoyadBox.Text = "...";
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
